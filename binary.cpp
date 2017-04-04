@@ -8,9 +8,8 @@ int main( )
    short int a = -6730;
    float b = 68.123; 
    char c = 'J';
-   ofstream binf{"abc.bin", ios::binary};
+   ofstream binf{"abc.bin", ios::binary};   
    
-   //binf.open("abc.bin");
    binf.write(reinterpret_cast<char*>(&a), sizeof(a));
    binf.write(reinterpret_cast<char*>(&b), sizeof(b));
    binf.write(reinterpret_cast<char*>(&c), sizeof(c));
